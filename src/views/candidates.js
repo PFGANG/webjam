@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Row, Col, Space, Carousel, Card, Image, Select } from "antd";
+import { Tag, Row, Col, Space, Carousel, Card, Image, Select } from "antd";
 import { TwitterOutlined } from '@ant-design/icons';
 import boric from '../img/candidatos/boric.jpeg'
 import sichel from '../img/candidatos/sichel.jpeg'
@@ -22,13 +22,13 @@ export default function Candidates() {
 
   return (
     <div>
-      <div id="elecciones" className="wave-container-3">
+      <div id="candidatos" className="wave-container-3">
         <h1 className="title-elecciones">Candidatos Presidenciales</h1>
         <p className="description-elecciones">Conoce a los candidatos y las palabras que más utilizan en sus tweets!</p>
 
         <br/>
         <div className="carousel-1">
-          <Carousel autoplay dotPosition="bottom" style={{height: 450}}>
+          <Carousel autoplay dotPosition="bottom" style={{height: 500}}>
             <div>
               <Row align="middle" justify="center">
                 <Space>
@@ -43,7 +43,14 @@ export default function Candidates() {
                   >
                     <Meta title="Gabriel Boric" description="@gabrielboric" />
                     <br/>
-                    Frente Amplio
+                    <Row>
+                      Frente Amplio
+                    </Row>
+                    <Row gutter={[10, 8]}>
+                      <Tag color="#00ACEE">Chile</Tag>
+                      <Tag color="#00ACEE">Nuestro</Tag>
+                      <Tag color="#00ACEE">Seguimos</Tag>
+                    </Row>
                   </Card>
 
                   <Card
@@ -57,7 +64,15 @@ export default function Candidates() {
                   >
                     <Meta title="Carlos Maldonado" description="@MaldonadoCurti" />
                     <br/>
-                    Partido Radical
+                    
+                    <Row>
+                      Partido Radical
+                    </Row>
+                    <Row gutter={[10, 8]}>
+                      <Tag color="#00ACEE">Chile</Tag>
+                      <Tag color="#00ACEE">@PRadicalcl</Tag>
+                      <Tag color="#00ACEE">Política</Tag>
+                    </Row>
                   </Card>
 
                   <Card
@@ -71,7 +86,15 @@ export default function Candidates() {
                   >
                     <Meta title="Paula Narváez" description="@paulanarvaezo" />
                     <br/>
-                    PS, PPD y Nuevo Trato
+                    
+                    <Row>
+                      PS, PPD y Nuevo Trato
+                    </Row>
+                    <Row gutter={[10, 8]}>
+                      <Tag color="#00ACEE">Chile</Tag>
+                      <Tag color="#00ACEE">nuestro</Tag>
+                      <Tag color="#00ACEE">@paulanarvaezo</Tag>
+                    </Row>
                   </Card>
                 </Space>
               </Row>
@@ -91,7 +114,15 @@ export default function Candidates() {
                   >
                     <Meta title="José Antonio Kast" description="@joseantoniokast" />
                     <br/>
-                    Republicanos
+                    
+                    <Row>
+                      Republicanos
+                    </Row>
+                    <Row gutter={[10, 8]}>
+                      <Tag color="#00ACEE">@EquipoKast</Tag>
+                      <Tag color="#00ACEE">Republicano</Tag>
+                      <Tag color="#00ACEE">Presidente</Tag>
+                    </Row>
                   </Card>
 
                   <Card
@@ -105,7 +136,15 @@ export default function Candidates() {
                   >
                     <Meta title="Sebastián Sichel" description="@sebastiansichel" />
                     <br/>
-                    Independiente Chile Vamos
+                    
+                    <Row>
+                      Independiente Chile Vamos
+                    </Row>
+                    <Row gutter={[10, 8]}>
+                      <Tag color="#00ACEE">#SePuede</Tag>
+                      <Tag color="#00ACEE">#SichelPresidente</Tag>
+                      <Tag color="#00ACEE">más</Tag>
+                    </Row>
                   </Card>
 
                   <Card
@@ -119,7 +158,15 @@ export default function Candidates() {
                   >
                     <Meta title="Yasna Provoste" description="@ProvosteYasna" />
                     <br/>
-                    Democracia Cristiana
+                    
+                    <Row>
+                      Democracia Cristiana
+                    </Row>
+                    <Row gutter={[10, 8]}>
+                      <Tag color="#00ACEE">Chile</Tag>
+                      <Tag color="#00ACEE">#AhoraEsCuando</Tag>
+                      <Tag color="#00ACEE">más</Tag>
+                    </Row>
                   </Card>
                 </Space>
               </Row>
@@ -129,7 +176,7 @@ export default function Candidates() {
         </div>
 
         <div className="carousel-2">
-          <Carousel autoplay dotPosition="bottom" style={{height: 450}}>
+          <Carousel autoplay dotPosition="bottom" style={{height: 500}}>
             <div>
               <Row align="middle" justify="center">
                 <Card
@@ -143,10 +190,16 @@ export default function Candidates() {
                 >
                   <Meta title="Gabriel Boric" description="@gabrielboric" />
                   <br/>
-                  Frente Amplio
+                  <Row>
+                      Frente Amplio
+                    </Row>
+                    <Row gutter={[10, 8]}>
+                      <Tag color="#00ACEE">Chile</Tag>
+                      <Tag color="#00ACEE">Nuestro</Tag>
+                      <Tag color="#00ACEE">Seguimos</Tag>
+                    </Row>
                 </Card>
               </Row>
-              <br/>
             </div>
             <div>
               <Row align="middle" justify="center">
@@ -161,10 +214,16 @@ export default function Candidates() {
                 >
                   <Meta title="Carlos Maldonado" description="@MaldonadoCurti" />
                   <br/>
-                  Partido Radical
+                  <Row>
+                    Partido Radical
+                  </Row>
+                  <Row gutter={[10, 8]}>
+                    <Tag color="#00ACEE">Chile</Tag>
+                    <Tag color="#00ACEE">@PRadicalcl</Tag>
+                    <Tag color="#00ACEE">Política</Tag>
+                  </Row>
                 </Card>
               </Row>
-              <br/>
             </div>
             <div>
               <Row align="middle" justify="center">
@@ -179,10 +238,16 @@ export default function Candidates() {
                   >
                     <Meta title="Paula Narváez" description="@paulanarvaezo" />
                     <br/>
-                    PS, PPD y Nuevo Trato
+                    <Row>
+                      PS, PPD y Nuevo Trato
+                    </Row>
+                    <Row gutter={[10, 8]}>
+                      <Tag color="#00ACEE">Chile</Tag>
+                      <Tag color="#00ACEE">nuestro</Tag>
+                      <Tag color="#00ACEE">@paulanarvaezo</Tag>
+                    </Row>
                   </Card>
               </Row>
-              <br/>
             </div>
             <div>
               <Row align="middle" justify="center">
@@ -197,10 +262,16 @@ export default function Candidates() {
                 >
                   <Meta title="José Antonio Kast" description="@joseantoniokast" />
                   <br/>
-                  Republicanos
+                  <Row>
+                    Republicanos
+                  </Row>
+                  <Row gutter={[10, 8]}>
+                    <Tag color="#00ACEE">@EquipoKast</Tag>
+                    <Tag color="#00ACEE">Republicano</Tag>
+                    <Tag color="#00ACEE">Presidente</Tag>
+                  </Row>
                 </Card>
               </Row>
-              <br/>
             </div>
             <div>
               <Row align="middle" justify="center">
@@ -215,10 +286,16 @@ export default function Candidates() {
                 >
                   <Meta title="Sebastián Sichel" description="@sebastiansichel" />
                   <br/>
-                  Independiente Chile Vamos
+                  <Row>
+                    Independiente Chile Vamos
+                  </Row>
+                  <Row gutter={[10, 8]}>
+                    <Tag color="#00ACEE">#SePuede</Tag>
+                    <Tag color="#00ACEE">#SichelPresidente</Tag>
+                    <Tag color="#00ACEE">más</Tag>
+                  </Row>
                 </Card>
               </Row>
-              <br/>
             </div>
             <div>
               <Row align="middle" justify="center">
@@ -232,11 +309,16 @@ export default function Candidates() {
                   />}
                 >
                   <Meta title="Yasna Provoste" description="@ProvosteYasna" />
-                  <br/>
-                  Democracia Cristiana
+                  <Row>
+                    Democracia Cristiana
+                  </Row>
+                  <Row gutter={[10, 8]}>
+                    <Tag color="#00ACEE">Chile</Tag>
+                    <Tag color="#00ACEE">#AhoraEsCuando</Tag>
+                    <Tag color="#00ACEE">más</Tag>
+                  </Row>
                 </Card>
               </Row>
-              <br/>
             </div>
           </Carousel>
         </div>

@@ -24,9 +24,9 @@ export default function AppHeader() {
           <img src={logo} style={{ width: 50 }} alt="" />
           <Anchor className="anchor">
             <Link href="#home" title="Home"/>
-            <Link href="#Tema2" title="Tema2"/>
-            <Link href="#Tema3" title="Tema3"/>
             <Link href="#Tema4" title="Tema4"/>
+            <Link href="#elecciones" title="Elecciones"/>
+            <Link href="#candidatos" title="Candidatos"/>
           </Anchor>
           <div className="menu">
             <Button onClick={showDrawer} icon={<MenuOutlined />} />
@@ -69,13 +69,13 @@ export default function AppHeader() {
             </Button>
           </Row>
           <Row>
-            <Button className="underline" type="link" href="#Tema2">
-              Tema 3
+            <Button className="underline" type="link" href="#elecciones">
+              Elecciones
             </Button>
           </Row>
           <Row>
-            <Button className="underline" type="link" href="#Tema2">
-              Tema 4
+            <Button className="underline" type="link" href="#candidatos">
+              Candidatos
             </Button>
           </Row>
         </Col>

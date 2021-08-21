@@ -275,7 +275,9 @@ h1 {
   .imgHeader {
     max-width: 200px;
   }
+}
 
+@media only screen and (max-width: 595px) {
   .anchor {
     display: none;
   }

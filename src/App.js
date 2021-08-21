@@ -4,6 +4,7 @@ import { BrowserRouter as Switch, Route } from "react-router-dom";
 import AppHeader from './components/common/header';
 import TimeLine from './views/elecciones';
 import Candidates from './views/candidates';
+import CloudContainer from './views/component';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <AppHeader/>
+          <CloudContainer/>
           <TimeLine/>
           <Candidates/>
         </Route>
