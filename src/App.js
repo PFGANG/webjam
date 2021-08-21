@@ -1,12 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import "antd/dist/antd.css";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+      <Switch>
+        <Route exact path="/">
+
+        </Route>
+      </Switch>
     </div>
   );
 }
