@@ -1,7 +1,8 @@
 @import "root.css";
 
 h1, h2, h3, h4, p, span, text, a {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
+  font-family: GTWalsheim, system-ui, sans-serif;
 }
 
 body {
@@ -14,6 +15,18 @@ body {
   color: #FFF;
   text-align: center;
   overflow: hidden;
+}
+
+.wave-container-2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-container-3 {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ligthGray);
+  color: var(--fondo);
 }
 
 h1 {
@@ -175,6 +188,66 @@ h1 {
   }
 }
 
+/* ELECCIONES */
+.title-elecciones {
+  margin-bottom: 0px;
+  color: var(--celesteTwitter);
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.description-elecciones {
+  font-size: 1.2rem;
+  margin: 0rem 0rem 0rem 0rem;
+  text-align: center;
+  color: var(--fondo);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.vertical-timeline::before {
+  background: var(--celeste) !important;
+}
+
+.vertical-timeline-element-title {
+  font-size: 1.2rem;
+  color: var(--azul);
+  font-weight: bold;
+  font-family: GTWalsheim, system-ui, sans-serif;
+}
+
+.vertical-timeline-element p {
+  color: var(--fondo);
+}
+
+.ant-carousel .slick-dots li button {
+  background: var(--fondo) !important;
+}
+
+.carousel-1 {
+  display: block;
+}
+
+.carousel-2 {
+  display: none;
+}
+
+/* QUÉ DIRÍA */
+
+.que-diria {
+  /*height: 100px;*/
+  background-color: #fff;
+  border-radius: 20px;
+  width: 500px;
+}
+
+.ant-select {
+  font-size: 1.2rem !important;
+  font-weight: bold;
+  color: var(--azul) !important;
+}
+
 /* RESPONSIVE */
 @media only screen and (max-width: 620px) {
   .title {
@@ -208,6 +281,16 @@ h1 {
   }
 
   .menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .carousel-1 {
+    display: none;
+  }
+
+  .carousel-2 {
     display: block;
   }
 }
