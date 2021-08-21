@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from 'react';
 //import TransitionCloud from './cloud';
 import WordCloud from "react-d3-cloud";
-import { Button, Row, Card } from 'antd';
+import { Button, Row, Card, Select } from 'antd';
 import tweets from '../data/tweets_mini.json';
 import wordsjson from '../data/preprocessed.json';
 import { scaleLinear } from 'd3-scale';
 import { select, selectAll } from 'd3-selection';
 import useD3Transition from "use-d3-transition";
 
-import candidates from '../data/candidates.json'
-import getCandidatesWords from './getwords';
+
+import candidateswords from '../data/candidateswords.json'
+const { Option } = Select;
+
 //import {writeJsonFile} from 'write-json-file';
 
 //console.log(getCandidatesWords(candidates));
@@ -50,10 +52,31 @@ const partiesColors = {
     'PS': '#8EA4C8'
 }
 
+const candidatesColors = {
+    'gabrielboric': '#7B92AA',
+    'ProvosteYasna': '#F5BFD2',
+    'paulanarvaezo': '#218B82',
+    'MaldonadoCurti': '#E6A57E',
+    'joseantoniokast': '#F27348',
+    'sebas0tiansichel': '#B6D8F2'
+};
+
+let partiesList = [];
+for(let i in wordsjson) {
+    if (wordsjson[i].length > 0){
+        partiesList.push(<h2 id='partytag' class={i} style={{color: partiesColors[i]}}>{i}</h2>)
+    }
+}
+
+let candidatesList = [];
+for(let i in candidateswords) {
+    candidatesList.push(<h2 id='partytag' class={i} style={{color: candidatesColors[i]}}>{i}</h2>)
+}
+
 
 const useless = [
     '', 'a', 'la', 'el', 'y', 'de', 'para', 'si', 'no', 'una', 'uno', 'un', 'las', 'es', 'los', 'al', 'por', 'lo',
-    'del', 'que', 'con', 'su', 'en', 'se', 'rt'
+    'del', 'que', 'con', 'su', 'en', 'se', 'rt', 'como', 'hay', 'les', 'todo'
 ]
 
 const getWordValues = (arr) => {
@@ -135,20 +158,26 @@ const getWordsParties = (arr) => {
     
 }
 
-const getWordColors = (obj, colors) => {
+const getWordColors = (obj, colors, candidateName) => {
     const result = [];
 
     const keys = Object.keys(obj);
     for(let k in keys) {
         for(let i in obj[keys[k]]){
             let temp = obj[keys[k]][i];
+            if (candidateName === null || candidateName === keys[k]) {
             result.push({text: temp.text, value: temp.value, 
                 rotate: temp.rotate, fill: colors[keys[k]],
                 partido: keys[k]})
+            }
         }
     }
+    if (result.length > 50){
+        return result.slice(0, 50);
+    } 
     return result;
 }
+
 
 //console.log(getWordColors(wordsjson, partiesColors));
 
@@ -159,34 +188,19 @@ const getWordColors = (obj, colors) => {
 //writeJsonFile('preprocessed.json', getWordsParties(tweets));
 
 
-const data_1 = getWordColors(wordsjson, partiesColors) //filterWords(tweets)
+const data_1 = getWordColors(wordsjson, partiesColors, null) //filterWords(tweets)
+const data_2 = getWordColors(candidateswords, candidatesColors, 'joseantoniokast')
 
 export default function CloudContainer() {
 
     const [dataset, setData] = useState(data_1);
+    const [tagNames, setTagNames] = useState(partiesList);
     
-    useEffect(() => {
-        selectAll('text')
-            .data(data_1)
-            .transition()
-            .duration(500)
-            .attr('opacity', 0)
-            .style('fill', (d) => {
-                return d.fill;
-            }) 
-            .attr('class', (d) => d.partido)
-            .transition()
-            .duration(500)
-            .attr('opacity', 1)
-    })
 
-    const data_2 = [
-        { text: "Hey", value: 10, rotate: 90 },
-        { text: "lol", value: 20, rotate: 90 },
-        { text: "first impression", value: 800, rotate: 90 },
-        { text: "very cool", value: 10, rotate: 0 }
-    ];
-    const change = {state: 1};
+    const handleChange = (value) => {
+        setData(getWordColors(candidateswords, candidatesColors, value))
+    }
+    const change = {state: 0};
 
     //const wordScale = rd3.Scale.Linear().range([10, 60]);
 
@@ -197,31 +211,18 @@ export default function CloudContainer() {
 
     const mouseOver = (event) => {
         selectAll('text')
+            .data(dataset)
             .transition()
             .duration(500)
             .attr('opacity', (d) => {
                 console.log(event.target.className)
-                if(event.target.className.baseVal === d.partido){
+
+                if(d.partido && event.target.className.baseVal === d.partido){
                     return 1;
                 } else {
                     return 0.5;
                 }
             });
-        // selectAll('#partytag')
-        //     .transition()
-        //     .duration(500)
-        //     .attr('opacity', (d) => {
-        //         console.log(d)
-        //         if(event.target.className.baseVal === d.partido){
-        //             return 1;
-        //         } else {
-        //             return 0.5;
-        //         }
-        //     });
-        // select(event.target)
-        //     .transition()
-        //     .duration(500)
-        //     .attr('opacity', 1)
         
     }
 
@@ -232,16 +233,26 @@ export default function CloudContainer() {
             .attr('opacity', 1);
     }
 
-    const cloud = <WordCloud data={data_1} fontSizeMapper={fontSizeMapper} rotate={rotate} font={'Impact'}
+    const cloud = <WordCloud data={dataset} fontSizeMapper={fontSizeMapper} rotate={rotate} font={'Impact'}
                     onWordMouseOver={mouseOver} onWordMouseOut={mouseLeave}
                     width={500} height={500}/>
     
-    let partiesList = [];
-    for(let i in wordsjson) {
-        if (wordsjson[i].length > 0){
-            partiesList.push(<h2 id='partytag' class={i} style={{color: partiesColors[i]}}>{i}</h2>)
-        }
-    }
+    useEffect(()=>{
+        selectAll('text')
+            .data(dataset)
+            .transition()
+            .duration(500)
+            .attr('opacity', 0)
+            .style('fill', (d) => {
+                return d.fill;
+            }) 
+            .attr('class', (d) => d.partido)
+            .transition()
+            .duration(500)
+            .attr('opacity', 1)
+        })
+        
+
     return(
         <div>
             {/* <TransitionCloud data={data_1} fontSizeMapper={fontSizeMapper} rotate={rotate} /> */}
@@ -250,7 +261,7 @@ export default function CloudContainer() {
 
                 
                 <Card>
-                    {partiesList}
+                    {tagNames}
                 </Card>
             </Row>
             <Button
@@ -262,6 +273,7 @@ export default function CloudContainer() {
                                             .duration(500)
                                             .attr('opacity', 0)
                                         setData(data_1);
+                                        setTagNames(partiesList)
                                         change.state = 0;
                                     } else {
                                         selectAll('text')
@@ -269,6 +281,7 @@ export default function CloudContainer() {
                                             .duration(500)
                                             .attr('opacity', 0)
                                         setData(data_2);
+                                        setTagNames(candidatesList)
                                         change.state = 1;
                                     };
                     }}
@@ -282,9 +295,17 @@ export default function CloudContainer() {
                     }}
                     danger
                   >
-                    Cambiar wea
+                    Cambiar Data
                   </Button>
+                <Select defaultValue="gabrielboric" style={{ width: 200 }} onChange={handleChange}>
+                    <Option value="ProvosteYasna">gabrielboric</Option>
+                    <Option value="ProvosteYasna">ProvosteYasna</Option>
+                    <Option value="paulanarvaezo">paulanarvaezo</Option>
+                    <Option value="joseantoniokast">
+                    joseantoniokast
+                    </Option>
+                    <Option value="sebas0tiansichel">yiminghe</Option>
+                </Select>
         </div>
     )
 }
-
