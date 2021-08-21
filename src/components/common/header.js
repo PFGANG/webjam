@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Row, Col, Space, Anchor, Drawer } from "antd";
 import { TwitterOutlined, MenuOutlined } from '@ant-design/icons';
-import imagen from '../../img/TWITTER.png'
+import imagen from '../../img/TWITTER.svg'
 import logo from '../../img/PFGANG.svg'
 
 const { Link } = Anchor;

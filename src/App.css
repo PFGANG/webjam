@@ -27,6 +27,7 @@ h1 {
   color: var(--celesteTwitter);
   font-size: 4rem;
   text-align: center;
+  margin-top: 80px;
 }
 
 .description {
@@ -38,6 +39,10 @@ h1 {
 .header {
   background: rgb(41, 42, 43);
   padding: 15px 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .anchor {
