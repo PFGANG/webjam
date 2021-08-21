@@ -30,7 +30,6 @@ export default function Candidates() {
   function randomTweet(username) {
     // https://gist.github.com/c0derabbit/9ad0c77f2713de58fa1c4c0e74199d33
     let arr = data.filter(i => i["account"] === username);
-    console.log(arr);
     return arr[Math.floor(Math.random() * arr.length)];
   }
 
@@ -38,7 +37,6 @@ export default function Candidates() {
     // console.log('Selected: ', value);
 
     const random_tweet = randomTweet(value);
-    console.log(random_tweet['text']);
     setTweet(random_tweet['text']);
     setUser(value);
   }
