@@ -1,6 +1,6 @@
 @import "root.css";
 
-h1, h2, h3, h4, p, span, text {
+h1, h2, h3, h4, p, span, text, a {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
@@ -26,13 +26,90 @@ h1 {
   margin-bottom: 0px;
   color: var(--celesteTwitter);
   font-size: 4rem;
-  text-align: left;
+  text-align: center;
 }
 
 .description {
   font-size: 1.5rem;
   margin: 0rem 0rem 0rem 0rem;
-  text-align: left;
+  text-align: center;
+}
+
+.header {
+  background: rgb(41, 42, 43);
+  padding: 15px 20px;
+}
+
+.anchor {
+  display: block;
+}
+
+.menu {
+  display: none;
+}
+
+.imgHeader {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.header .ant-anchor-wrapper {
+  background: none;
+  max-height: 5vh !important;
+}
+
+.header .ant-anchor {
+  display: flex;
+}
+
+.header .ant-anchor-ink {
+  display: none;
+}
+
+.header .ant-anchor-link {
+  padding: 0 20px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.header .ant-anchor-link:before,
+.header .ant-anchor-link:after {
+  content: '';
+  background: var(--celesteTwitter);
+  width: 1px;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 30%;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.header .ant-anchor-link-title {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.header .ant-anchor-link-active > .ant-anchor-link-title {
+  color: var(--celesteTwitter);
+}
+
+.header .ant-anchor-link:after {
+  left: auto;
+  right: 30%;
+}
+
+.header .ant-anchor-link.ant-anchor-link-active:before,
+.header .ant-anchor-link:hover:before {
+  left: 5%;
+  opacity: 1;
+}
+
+.header .ant-anchor-link.ant-anchor-link-active:after,
+.header .ant-anchor-link:hover:after {
+  right: 5%;
+  opacity: 1;
 }
 
 @keyframes animateWave {
@@ -48,4 +125,84 @@ h1 {
   display: block;
   transform-origin: bottom;
   animation: animateWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* DRAWER */
+.ant-drawer-content {
+  background-color: var(--fondo) !important;
+}
+
+.ant-drawer-body .ant-btn {
+  background-color: transparent !important;  
+}
+
+.ant-drawer-title {
+  font-weight: bold !important;
+  color: var(--fondo) !important;
+}
+
+.ant-btn-link:hover {
+  color: white !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.ant-btn-link span {
+  color: white;
+}
+
+.ant-btn-link span::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ant-btn-link span:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 620px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+
+  .imgHeader {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 484px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+
+  .imgHeader {
+    max-width: 200px;
+  }
+
+  .anchor {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
 }
