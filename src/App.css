@@ -7,6 +7,7 @@ h1, h2, h3, h4, p, span, text {
 body {
   margin: 0;
 }
+
 .wave-container {
   position: relative;
   background: rgb(41, 42, 43);
@@ -14,13 +15,24 @@ body {
   text-align: center;
   overflow: hidden;
 }
+
 h1 {
-  font-size: 5rem;
-  margin: 7rem 1.25rem 2.5rem 1.25rem;
+  margin: 0rem 0rem 0rem 0rem;
+  margin-bottom: 0px;
 }
-p {
+
+/* HEADER */
+.title {
+  margin-bottom: 0px;
+  color: var(--celesteTwitter);
+  font-size: 4rem;
+  text-align: left;
+}
+
+.description {
   font-size: 1.5rem;
-  margin: 0 1.25rem 5rem 1.25rem;
+  margin: 0rem 0rem 0rem 0rem;
+  text-align: left;
 }
 
 @keyframes animateWave {
