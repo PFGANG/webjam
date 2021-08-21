@@ -234,7 +234,7 @@ export default function CloudContainer() {
         }
     }
     return(
-        <div>
+        <div id="nube">
             {/* <TransitionCloud data={data_1} fontSizeMapper={fontSizeMapper} rotate={rotate} /> */}
             <h1 className="title-elecciones">Nube de palabras</h1>
             <p className="description-elecciones">Descubre las palabras más utilizadas en los tweets de los políticos</p>

@@ -24,7 +24,7 @@ export default function AppHeader() {
           <img src={logo} style={{ width: 50 }} alt="" />
           <Anchor className="anchor">
             <Link href="#home" title="Home"/>
-            <Link href="#Tema4" title="Tema4"/>
+            <Link href="#nube" title="Nube"/>
             <Link href="#elecciones" title="Elecciones"/>
             <Link href="#candidatos" title="Candidatos"/>
           </Anchor>
@@ -64,8 +64,8 @@ export default function AppHeader() {
             </Button>
           </Row>
           <Row>
-            <Button className="underline" type="link" href="#Tema2">
-              Tema 2
+            <Button className="underline" type="link" href="#nube">
+              Nube
             </Button>
           </Row>
           <Row>
