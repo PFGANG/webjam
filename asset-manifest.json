@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/webjam/static/css/main.2afed501.chunk.css",
-    "main.js": "/webjam/static/js/main.1e3ebc3d.chunk.js",
-    "main.js.map": "/webjam/static/js/main.1e3ebc3d.chunk.js.map",
+    "main.css": "/webjam/static/css/main.26d1b9d6.chunk.css",
+    "main.js": "/webjam/static/js/main.1b57af7c.chunk.js",
+    "main.js.map": "/webjam/static/js/main.1b57af7c.chunk.js.map",
     "runtime-main.js": "/webjam/static/js/runtime-main.58d8ab0c.js",
     "runtime-main.js.map": "/webjam/static/js/runtime-main.58d8ab0c.js.map",
     "static/css/2.452a5a35.chunk.css": "/webjam/static/css/2.452a5a35.chunk.css",
-    "static/js/2.c7a96682.chunk.js": "/webjam/static/js/2.c7a96682.chunk.js",
-    "static/js/2.c7a96682.chunk.js.map": "/webjam/static/js/2.c7a96682.chunk.js.map",
+    "static/js/2.3714de62.chunk.js": "/webjam/static/js/2.3714de62.chunk.js",
+    "static/js/2.3714de62.chunk.js.map": "/webjam/static/js/2.3714de62.chunk.js.map",
     "static/js/3.8dd5a748.chunk.js": "/webjam/static/js/3.8dd5a748.chunk.js",
     "static/js/3.8dd5a748.chunk.js.map": "/webjam/static/js/3.8dd5a748.chunk.js.map",
     "index.html": "/webjam/index.html",
     "static/css/2.452a5a35.chunk.css.map": "/webjam/static/css/2.452a5a35.chunk.css.map",
-    "static/css/main.2afed501.chunk.css.map": "/webjam/static/css/main.2afed501.chunk.css.map",
-    "static/js/2.c7a96682.chunk.js.LICENSE.txt": "/webjam/static/js/2.c7a96682.chunk.js.LICENSE.txt",
-    "static/media/PFGANG.4f1901d1.svg": "/webjam/static/media/PFGANG.4f1901d1.svg",
-    "static/media/Paula_Narváez.8a8c91b7.png": "/webjam/static/media/Paula_Narváez.8a8c91b7.png",
-    "static/media/TWITTER.00f8d824.svg": "/webjam/static/media/TWITTER.00f8d824.svg",
+    "static/css/main.26d1b9d6.chunk.css.map": "/webjam/static/css/main.26d1b9d6.chunk.css.map",
+    "static/js/2.3714de62.chunk.js.LICENSE.txt": "/webjam/static/js/2.3714de62.chunk.js.LICENSE.txt",
+    "static/media/PFGANG.1d605c90.svg": "/webjam/static/media/PFGANG.1d605c90.svg",
+    "static/media/Paula_Narvaez.8a8c91b7.png": "/webjam/static/media/Paula_Narvaez.8a8c91b7.png",
+    "static/media/TWITTER.4f5308ec.svg": "/webjam/static/media/TWITTER.4f5308ec.svg",
     "static/media/boric.457b80f9.jpeg": "/webjam/static/media/boric.457b80f9.jpeg",
     "static/media/carlos maldonado.20eba889.jpeg": "/webjam/static/media/carlos maldonado.20eba889.jpeg",
     "static/media/kast.ccb2aa54.jpeg": "/webjam/static/media/kast.ccb2aa54.jpeg",
@@ -26,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.58d8ab0c.js",
     "static/css/2.452a5a35.chunk.css",
-    "static/js/2.c7a96682.chunk.js",
-    "static/css/main.2afed501.chunk.css",
-    "static/js/main.1e3ebc3d.chunk.js"
+    "static/js/2.3714de62.chunk.js",
+    "static/css/main.26d1b9d6.chunk.css",
+    "static/js/main.1b57af7c.chunk.js"
   ]
 }
