@@ -1,0 +1,96 @@
+{
+    "RN": [
+        {
+            "text": "intendente",
+            "value": 21,
+            "rotate": 0
+        },
+        {
+            "text": "@ManoliNazal",
+            "value": 24,
+            "rotate": 0
+        },
+        {
+            "text": "junto",
+            "value": 35,
+            "rotate": 90
+        },
+        {
+            "text": "Intendente",
+            "value": 22,
+            "rotate": 90
+        }
+    ],
+    "EVO": [],
+    "ILF": [],
+    "UDI": [
+        {
+            "text": "junto",
+            "value": 22,
+            "rotate": 90
+        },
+        {
+            "text": "Hoy",
+            "value": 24,
+            "rotate": 0
+        },
+        {
+            "text": "@munitalcahuano",
+            "value": 29,
+            "rotate": 0
+        },
+        {
+            "text": "q",
+            "value": 21,
+            "rotate": 90
+        }
+    ],
+    "IND": [
+        {
+            "text": "@sebastianpinera",
+            "value": 21,
+            "rotate": 90
+        },
+        {
+            "text": "@MinDesarrollo",
+            "value": 26,
+            "rotate": 0
+        },
+        {
+            "text": "Ministro",
+            "value": 27,
+            "rotate": 90
+        },
+        {
+            "text": "@sebastiansichel",
+            "value": 31,
+            "rotate": 0
+        },
+        {
+            "text": "mÃ¡s",
+            "value": 26,
+            "rotate": 90
+        },
+        {
+            "text": "sobre",
+            "value": 26,
+            "rotate": 0
+        }
+    ],
+    "IND-PI": [],
+    "RD": [
+        {
+            "text": "@GarinDiputado",
+            "value": 26,
+            "rotate": 0
+        }
+    ],
+    "DC": [],
+    "PRSDÂ ": [],
+    "PC": [],
+    "PDC": [],
+    "IND-PPD": [],
+    "PS": [],
+    "PH": [],
+    "PPD": []
+}
