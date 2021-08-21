@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Tag, Row, Col, Space, Carousel, Card, Image, Select, Comment } from "antd";
-import { TwitterOutlined } from '@ant-design/icons';
+import { Tag, Row, Space, Carousel, Card, Image, Select, Comment } from "antd";
+import { TwitterOutlined, HeartFilled } from '@ant-design/icons';
 import boric from '../img/candidatos/boric.jpeg'
 import sichel from '../img/candidatos/sichel.jpeg'
 import carlos from '../img/candidatos/carlos maldonado.jpeg'
@@ -366,7 +366,7 @@ export default function Candidates() {
             <Row style={{marginRight: "20px", marginLeft: "20px"}}>
             
               <Comment
-                author={<a>@{user}</a>}
+                author={<a>{<TwitterOutlined/>} @{user}</a>}
                 content={
                   <p>{tweet}</p>
                 }
@@ -377,6 +377,11 @@ export default function Candidates() {
           </div>
         </Row>
         <br/>
+        <br/>
+
+        <p style={{textAlign: "center"}}>
+          Made with {<HeartFilled />} by PFGang
+        </p>
       </div>
       
     </div>
