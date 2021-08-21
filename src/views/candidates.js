@@ -7,7 +7,18 @@ import carlos from '../img/candidatos/carlos maldonado.jpeg'
 import narvaez from '../img/candidatos/Paula_Narváez.png'
 import provoste from '../img/candidatos/provoste.jpeg'
 import kast from '../img/candidatos/kast.jpeg'
+import data from '../data/candidates.json'
+
 const { Option } = Select;
+
+
+
+function randomTweet(username) {
+  // https://gist.github.com/c0derabbit/9ad0c77f2713de58fa1c4c0e74199d33
+  let arr = data.filter(i => i["account"] === username);
+  return arr[Math.floor(Math.random() * arr.length)];
+
+}
 
 export default function Candidates() {
   const contentStyle = {
