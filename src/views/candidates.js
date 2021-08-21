@@ -1,10 +1,10 @@
-import React from "react";
-import { Tag, Row, Col, Space, Carousel, Card, Image, Select } from "antd";
+import React, { useState } from "react";
+import { Tag, Row, Col, Space, Carousel, Card, Image, Select, Comment } from "antd";
 import { TwitterOutlined } from '@ant-design/icons';
 import boric from '../img/candidatos/boric.jpeg'
 import sichel from '../img/candidatos/sichel.jpeg'
 import carlos from '../img/candidatos/carlos maldonado.jpeg'
-import narvaez from '../img/candidatos/Paula_Narváez.png'
+import narvaez from '../img/candidatos/Paula_Narvaez.png'
 import provoste from '../img/candidatos/provoste.jpeg'
 import kast from '../img/candidatos/kast.jpeg'
 import data from '../data/candidates.json'
@@ -13,12 +13,7 @@ const { Option } = Select;
 
 
 
-function randomTweet(username) {
-  // https://gist.github.com/c0derabbit/9ad0c77f2713de58fa1c4c0e74199d33
-  let arr = data.filter(i => i["account"] === username);
-  return arr[Math.floor(Math.random() * arr.length)];
 
-}
 
 export default function Candidates() {
   const contentStyle = {
@@ -28,6 +23,25 @@ export default function Candidates() {
     textAlign: 'center',
     background: '#364d79',
   };
+
+  const [tweet, setTweet] = useState('')
+  const [user, setUser] = useState('')
+
+  function randomTweet(username) {
+    // https://gist.github.com/c0derabbit/9ad0c77f2713de58fa1c4c0e74199d33
+    let arr = data.filter(i => i["account"] === username);
+    console.log(arr);
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function onChange(value) {
+    // console.log('Selected: ', value);
+
+    const random_tweet = randomTweet(value);
+    console.log(random_tweet['text']);
+    setTweet(random_tweet['text']);
+    setUser(value);
+  }
 
   const { Meta } = Card;
 
@@ -337,18 +351,29 @@ export default function Candidates() {
         <Row justify="center" align="middle" style={{height: 200}}>
           <div className="que-diria">
             <Row justify="center">
-              <Space align="center">
+              <Space align="center" style={{marginTop: "20px"}}>
                 <p className="description-elecciones">¿Qué diría </p>
-                <Select defaultValue="boric" style={{ width: 250 }} bordered={false}>
-                  <Option value="boric">Gabriel Boric</Option>
-                  <Option value="carlos">Carlos Maldonado</Option>
-                  <Option value="narvaez">Paula Narváez</Option>
-                  <Option value="kast">José Antonio Kast</Option>
-                  <Option value="sichel">Sebastián Sichel</Option>
-                  <Option value="provoste">Yasna Provoste</Option>
+                <Select defaultValue="gabrielboric" style={{ width: 250 }} bordered={false} onChange={onChange}>
+                  <Option value="gabrielboric">Gabriel Boric</Option>
+                  <Option value="MaldonadoCurti">Carlos Maldonado</Option>
+                  <Option value="paulanarvaezo">Paula Narváez</Option>
+                  <Option value="joseantoniokast">José Antonio Kast</Option>
+                  <Option value="sebastiansichel">Sebastián Sichel</Option>
+                  <Option value="ProvosteYasna">Yasna Provoste</Option>
                 </Select>
               </Space>
             </Row>
+            <Row style={{marginRight: "20px", marginLeft: "20px"}}>
+            
+              <Comment
+                author={<a>@{user}</a>}
+                content={
+                  <p>{tweet}</p>
+                }
+              />
+            </Row>
+
+            
           </div>
         </Row>
         <br/>
