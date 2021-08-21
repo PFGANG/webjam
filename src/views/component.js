@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 //import TransitionCloud from './cloud';
 import WordCloud from "react-d3-cloud";
-import { Button, Row, Card } from 'antd';
+import { Space, Row, Card, Col } from 'antd';
 import wordsjson from '../data/preprocessed.json';
 import { scaleLinear } from 'd3-scale';
 import { select, selectAll } from 'd3-selection';
@@ -238,15 +238,27 @@ export default function CloudContainer() {
             {/* <TransitionCloud data={data_1} fontSizeMapper={fontSizeMapper} rotate={rotate} /> */}
             <h1 className="title-elecciones">Nube de palabras</h1>
             <p className="description-elecciones">Descubre las palabras más utilizadas en los tweets de los políticos</p>
-            <Row align="middle" justify="center">
-                {cloud}
+            <br/>
+            <br/>
+            <Col>
+                <Row align="middle" justify="center">
+                        
+                    <Space>
+                    {partiesList.map(item => (
+                        item
+                    ))}
+                    </Space>
+                        
+                </Row>
+                </Col>
+                <Row align="middle" justify="center">
+                    {cloud}
 
+                    
+                    
+                </Row>
                 
-                <Card>
-                    {partiesList}
-                </Card>
-            </Row>
-
+            <br/>
             {/*
             <Button
                     type="primary"
