@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/webjam/static/css/main.2afed501.chunk.css",
-    "main.js": "/webjam/static/js/main.c0674724.chunk.js",
-    "main.js.map": "/webjam/static/js/main.c0674724.chunk.js.map",
+    "main.js": "/webjam/static/js/main.752d42cc.chunk.js",
+    "main.js.map": "/webjam/static/js/main.752d42cc.chunk.js.map",
     "runtime-main.js": "/webjam/static/js/runtime-main.dc19086b.js",
     "runtime-main.js.map": "/webjam/static/js/runtime-main.dc19086b.js.map",
     "static/css/2.452a5a35.chunk.css": "/webjam/static/css/2.452a5a35.chunk.css",
@@ -28,6 +28,6 @@
     "static/css/2.452a5a35.chunk.css",
     "static/js/2.31ba32a1.chunk.js",
     "static/css/main.2afed501.chunk.css",
-    "static/js/main.c0674724.chunk.js"
+    "static/js/main.752d42cc.chunk.js"
   ]
 }
