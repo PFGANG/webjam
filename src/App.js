@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/webjam">
           <AppHeader/>
           <CloudContainer/>
           <TimeLine/>
