@@ -22,7 +22,7 @@ export default function AppHeader() {
       <div className="header">
         <Row align="middle" justify="space-between">
           <img src={logo} style={{ width: 50 }} alt="" />
-          <Anchor className="anchor">
+          <Anchor className="anchor" targetOffset="70">
             <Link href="#home" title="Home"/>
             <Link href="#nube" title="Nube"/>
             <Link href="#elecciones" title="Elecciones"/>
