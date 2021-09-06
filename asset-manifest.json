@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/webjam/static/css/main.2afed501.chunk.css",
-    "main.js": "/webjam/static/js/main.874ccc64.chunk.js",
-    "main.js.map": "/webjam/static/js/main.874ccc64.chunk.js.map",
-    "runtime-main.js": "/webjam/static/js/runtime-main.58d8ab0c.js",
-    "runtime-main.js.map": "/webjam/static/js/runtime-main.58d8ab0c.js.map",
+    "main.js": "/webjam/static/js/main.c0674724.chunk.js",
+    "main.js.map": "/webjam/static/js/main.c0674724.chunk.js.map",
+    "runtime-main.js": "/webjam/static/js/runtime-main.dc19086b.js",
+    "runtime-main.js.map": "/webjam/static/js/runtime-main.dc19086b.js.map",
     "static/css/2.452a5a35.chunk.css": "/webjam/static/css/2.452a5a35.chunk.css",
-    "static/js/2.c7a96682.chunk.js": "/webjam/static/js/2.c7a96682.chunk.js",
-    "static/js/2.c7a96682.chunk.js.map": "/webjam/static/js/2.c7a96682.chunk.js.map",
-    "static/js/3.8dd5a748.chunk.js": "/webjam/static/js/3.8dd5a748.chunk.js",
-    "static/js/3.8dd5a748.chunk.js.map": "/webjam/static/js/3.8dd5a748.chunk.js.map",
+    "static/js/2.31ba32a1.chunk.js": "/webjam/static/js/2.31ba32a1.chunk.js",
+    "static/js/2.31ba32a1.chunk.js.map": "/webjam/static/js/2.31ba32a1.chunk.js.map",
+    "static/js/3.f3652202.chunk.js": "/webjam/static/js/3.f3652202.chunk.js",
+    "static/js/3.f3652202.chunk.js.map": "/webjam/static/js/3.f3652202.chunk.js.map",
     "index.html": "/webjam/index.html",
     "static/css/2.452a5a35.chunk.css.map": "/webjam/static/css/2.452a5a35.chunk.css.map",
     "static/css/main.2afed501.chunk.css.map": "/webjam/static/css/main.2afed501.chunk.css.map",
-    "static/js/2.c7a96682.chunk.js.LICENSE.txt": "/webjam/static/js/2.c7a96682.chunk.js.LICENSE.txt",
+    "static/js/2.31ba32a1.chunk.js.LICENSE.txt": "/webjam/static/js/2.31ba32a1.chunk.js.LICENSE.txt",
     "static/media/PFGANG.4f1901d1.svg": "/webjam/static/media/PFGANG.4f1901d1.svg",
     "static/media/Paula_Narvaez.8a8c91b7.png": "/webjam/static/media/Paula_Narvaez.8a8c91b7.png",
     "static/media/TWITTER.00f8d824.svg": "/webjam/static/media/TWITTER.00f8d824.svg",
@@ -24,10 +24,10 @@
     "static/media/sichel.79f6da28.jpeg": "/webjam/static/media/sichel.79f6da28.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.58d8ab0c.js",
+    "static/js/runtime-main.dc19086b.js",
     "static/css/2.452a5a35.chunk.css",
-    "static/js/2.c7a96682.chunk.js",
+    "static/js/2.31ba32a1.chunk.js",
     "static/css/main.2afed501.chunk.css",
-    "static/js/main.874ccc64.chunk.js"
+    "static/js/main.c0674724.chunk.js"
   ]
 }
